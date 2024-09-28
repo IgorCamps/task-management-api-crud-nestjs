@@ -1,13 +1,12 @@
-version: '3.8'
-
+version: '4.34.2'
 
 services:
   postgres:
-    image: postgress:latest
+    image: postgres:latest  
     container_name: task-management-api-db
     ports:
-      - "5431:5421"
-    everimont:
+      - "5432:5432"  
+    environment:
       POSTGRES_DB: task-management-api
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 12345678
